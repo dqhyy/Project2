@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import avatar from "../assets/imgs/avatar.webp"
+import { logout } from '../services/authService';
 
 const UserProfile = () => {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const UserProfile = () => {
 
   const handleLogout = () => {
     alert('Bạn đã đăng xuất');
+    logout();
     navigate('/login');
   };
 
